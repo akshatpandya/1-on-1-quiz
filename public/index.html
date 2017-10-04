@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>multiplayer_quiz</title>
+    <link href="style.css" rel="stylesheet"></link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+  </head>
+  <body>
+    <div id="wait-area">
+
+    </div>
+    <button id="next">NEXT</button>
+    <button id="start">START</button>
+    <button id="challenge">CHALLENGE</button>
+    <div id="wrapper">
+      <div id="question-area">
+
+      </div>
+      <div id="options">
+        <ol>
+          <li id="option-1"></li>
+          <li id="option-2"></li>
+          <li id="option-3"></li>
+          <li id="option-4"></li>
+        </ol>
+      </div>
+      <input id="answer" type="text" placeholder="Enter your answer here"/>
+      <button id="send">Submit</button>
+    </div>
+    <!-- <script>
+      document.getElementById('start').onclick = function(){
+        var element = document.getElementById('start');
+        element.style.display = "none";
+        var elem = document.getElementById('wrapper');
+        elem.style.display = "block";
+      }
+    </script> -->
+    <script src="script.js"></script>
+  </body>
+</html>

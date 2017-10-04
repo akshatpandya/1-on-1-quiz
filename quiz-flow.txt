@@ -1,0 +1,13 @@
+wait for 1st player
+wait for 2nd player
+when both connected show 5sec timer
+
+when question for player 1 show other one that 'other player playing'
+vice - versa
+
+show points at end of each round
+
+5 questions each
+(use excel or some file to read questions)
+
+when all questions finished for both, show final scores!
