@@ -82,6 +82,8 @@ io.on('connection', function(socket){
     {
       if(player[0] == socket.id)
         p1chance = true;
+      if(player[1] == socket.id)
+        p2chance = true;
       if(p1chance == true)
       {
         row = ques_count;
@@ -91,6 +93,16 @@ io.on('connection', function(socket){
         p1chance = false;
         io.sockets.connected[player[0]].emit('start', q);
         io.sockets.connected[player[1]].emit('wait', 1);
+      }
+      else if(p2chance == true)
+      {
+        row = ques_count;
+        column = 0;
+        var q = populate();
+        ques_count += 1;
+        p2chance = false;
+        io.sockets.connected[player[1]].emit('start', q);
+        io.sockets.connected[player[0]].emit('wait', 1);
       }
     }
     else
@@ -134,7 +146,7 @@ io.on('connection', function(socket){
 
   //checking for correct answer
   socket.on('user-answer', function(data){
-    column = ques_count;
+    row = ques_count - 1;
     var answer = populate_answers();
     if (answer == data.answer) {
       var correct = 'correct';
