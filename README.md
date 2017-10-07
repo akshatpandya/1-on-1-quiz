@@ -1,4 +1,6 @@
 # 1-on-1-quiz
+One on One multiplayer quiz webapp using `sockets.io` for real time connection and NodeJS and express to host the server.
+The questions currently are hard-coded in an excel sheet and are read from that using a JS library 'excel'.
 
 Steps to use:
 
@@ -16,3 +18,4 @@ Rules:
 Possible enhancements:
 
 1) After each quiz the server needs to be restarted.
+2) Questions could be in a google sheet and use wikipedia API to generate random questions.
