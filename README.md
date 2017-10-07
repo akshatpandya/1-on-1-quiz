@@ -2,9 +2,9 @@
 
 Steps to use:
 
-1) cd 1-on-1-quiz
-2) node quiz.js
-3) open two browser windows and go to http://localhost:4000
+1) ```cd 1-on-1-quiz```
+2) ```node quiz.js```
+3) open two browser windows and go to ```http://localhost:4000```
 4) Start the quiz!
 
 Rules:
